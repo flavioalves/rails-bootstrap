@@ -1,4 +1,6 @@
 RailsHerokuBootstrap::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
   put '/usuarios' => 'settings#update', as: :update_user
   
