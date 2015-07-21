@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.2.1'
 
-gem 'rails',                   '4.1.0'
+gem 'rails',                   '4.2.0'
 gem 'pg'
 gem 'slim'
 gem 'unicorn'
-
 gem 'friendly_id'
 gem 'resque'
+gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'devise'
+gem 'omniauth-facebook'
 
 # external services
 gem 'newrelic_rpm'
@@ -18,13 +20,13 @@ gem 'protected_attributes'
 gem 'rails-observers'
 
 # assets
-gem 'sass-rails',     '~> 4.0.0'
-gem 'uglifier',       '>= 1.3.0'
+gem 'sass-rails', '~> 5.0'
+gem "compass-rails", github: "Compass/compass-rails", branch: "master"
+gem 'uglifier', '~> 2.7.1'
 gem 'font_assets'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
 # compass and plugins
-gem 'compass-rails'
 gem 'compass-normalize'
 gem 'singularitygs'
 gem 'singularity-extras'
