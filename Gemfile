@@ -18,13 +18,13 @@ gem 'protected_attributes'
 gem 'rails-observers'
 
 # assets
-gem 'sass-rails', '~> 5.0.3'
+gem 'sass-rails', '~> 5.0'
+gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 gem 'uglifier', '~> 2.7.1'
 gem 'font_assets'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
 # compass and plugins
-gem 'compass-rails'
 gem 'compass-normalize'
 gem 'singularitygs'
 gem 'singularity-extras'
