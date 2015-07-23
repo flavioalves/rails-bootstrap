@@ -11,5 +11,10 @@ RailsHerokuBootstrap::Application.routes.draw do
   get 'frontend/:template'   => 'frontend#show'
   get 'frontend'             => 'frontend#index'
 
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
   get ':slug'                => 'pages#show',     as: :page
+
 end
