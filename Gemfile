@@ -10,6 +10,7 @@ gem 'resque'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'carrierwave'
 
 # external services
 gem 'newrelic_rpm'

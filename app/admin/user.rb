@@ -4,7 +4,7 @@ ActiveAdmin.register User do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-   permit_params :name, :email
+   permit_params :name, :email, :avatar
   #
   # or
   #
@@ -30,6 +30,8 @@ ActiveAdmin.register User do
   f.inputs 'Campos' do
     f.input :name
     f.input :email
+    f.input :avatar, :as => :file, :hint => f.object.avatar.nil? ? 
+      f.template.content_tag(:span, "no photo yet") : f.template.image_tag(f.object.avatar.url)  
   end
   f.actions
 end
