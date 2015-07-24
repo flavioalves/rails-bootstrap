@@ -30,8 +30,7 @@ ActiveAdmin.register User do
   f.inputs 'Campos' do
     f.input :name
     f.input :email
-    f.input :avatar, :as => :file, :hint => f.object.avatar.nil? ? 
-      f.template.content_tag(:span, "no photo yet") : f.template.image_tag(f.object.avatar.url)  
+    f.input :avatar, :as => :file, :hint => image_tag(f.object.avatar.url(:thumb))  
   end
   f.actions
 end
